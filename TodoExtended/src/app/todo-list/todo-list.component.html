@@ -1,0 +1,22 @@
+<div>
+	<h1>Todos</h1>
+
+	<ng-container *ngIf="isNothingToDo()">
+		Congratulations! You can take today off.
+	</ng-container>
+
+	<ng-container *ngIf="isNothingToDo() == false">
+		<ng-container class="tempclass" *ngFor="let item of todos">
+			<app-todo-item [item]="item"></app-todo-item>
+		</ng-container>	
+	</ng-container>
+
+	<br />
+	<br />
+	<button (click)="turnOnAdd()">Add</button>
+	<div *ngIf="addMode">
+		New Task: <input type="text" [(ngModel)]="newTask" />
+		<button (click)="saveNew()">Save</button>
+	</div>
+
+</div>

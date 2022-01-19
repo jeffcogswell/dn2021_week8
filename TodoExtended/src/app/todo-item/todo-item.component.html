@@ -1,0 +1,6 @@
+<div>
+	<button *ngIf="item.completed == false" (click)="setComplete()">Complete</button>
+	{{ item.task }}
+	{{ item.completed }}
+	<button (click)="removeFromList()">&times;</button>
+</div>

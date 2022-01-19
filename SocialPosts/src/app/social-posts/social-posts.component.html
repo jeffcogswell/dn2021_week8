@@ -1,0 +1,12 @@
+<ng-container *ngFor="let post of posts">
+	<app-post [thepost]="post" (delete)="deletePost()"></app-post>
+</ng-container>
+
+<button (click)="showCreateForm()">Create</button>
+
+<div *ngIf="createPostVisible">
+	<h2>Create New Post</h2>
+	Title: <input type="text" [(ngModel)]="newtitle" /><br />
+	Thought: <input type="text" [(ngModel)]="newthought" /><br />
+	<button (click)="savePost()">Save</button>
+</div>

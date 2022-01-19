@@ -1,0 +1,11 @@
+<div style="margin:.5em; background-color:bisque">
+	My name is {{ mount?.name }}<br />
+	My height is {{ mount?.height }}<br />
+	<button (click)="turnEditOn()">Edit</button>
+	<div *ngIf="editMode">
+		Name: <input type="text" [(ngModel)]="newname" /><br />
+		Height: <input type="number" [(ngModel)]="newnum" /><br />
+		<button (click)="saveEdits()">Save</button>
+		<button (click)="cancelEdits()">Cancel</button>
+	</div>
+</div>
