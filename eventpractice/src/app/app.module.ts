@@ -3,16 +3,12 @@ import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { SocialPostsComponent } from './social-posts/social-posts.component';
-import { PostComponent } from './post/post.component';
-import { PostFormComponent } from './post-form/post-form.component';
+import { InfoComponent } from './info/info.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SocialPostsComponent,
-    PostComponent,
-    PostFormComponent
+    InfoComponent
   ],
   imports: [
     BrowserModule,

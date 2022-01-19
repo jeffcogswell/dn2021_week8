@@ -13,8 +13,6 @@ export class SocialPostsComponent implements OnInit {
     { title: 'second', thought: 'more thoughts' }
   ];
 
-  newtitle: string = '';
-  newthought: string = '';
   createPostVisible: boolean = false;
 
   constructor() { }
@@ -22,16 +20,7 @@ export class SocialPostsComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  savePost() {
-    this.posts.unshift(
-      { title: this.newtitle, thought: this.newthought }
-    );
-    this.createPostVisible = false;
-  }
-
   showCreateForm() {
-    this.newtitle = '';
-    this.newthought = '';
     this.createPostVisible = true;
   }
 
