@@ -13,7 +13,7 @@ export class PostComponent implements OnInit {
     thought: 'test thought'
   };
 
-  @Output() deleteEmitter = new EventEmitter();
+  @Output() delete = new EventEmitter<Post>();
 
   constructor() { }
 
@@ -21,7 +21,7 @@ export class PostComponent implements OnInit {
   }
 
   deleteMe() {
-    alert('Ready to delete me!');
+    this.delete.emit(this.thepost);
   }
 
 }

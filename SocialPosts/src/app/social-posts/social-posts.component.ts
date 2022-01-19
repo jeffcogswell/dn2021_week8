@@ -35,8 +35,15 @@ export class SocialPostsComponent implements OnInit {
     this.createPostVisible = true;
   }
 
-  deletePost() {
-    alert('Deleting!');
+  deletePost(thepost: Post) {
+    for (let i = 0; i < this.posts.length; i++) {
+      if (this.posts[i] == thepost) {
+        // remove it 
+        this.posts.splice(i, 1);
+        // and get out of the function altogether
+        return;
+      }
+    }
   }
 
 }
