@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
+import { Post } from '../post';
 
 @Component({
   selector: 'app-post-form',
@@ -10,13 +11,17 @@ export class PostFormComponent implements OnInit {
   newtitle: string = '';
   newthought: string = '';
 
+  @Output() newpost: EventEmitter<Post> = new EventEmitter<Post>();
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
   savePost() {
-    alert('Ready to save!');
+    let post:Post = { title: this.newtitle, thought: this.newthought };
+    this.newpost.emit(post);
+
   }
 
 }

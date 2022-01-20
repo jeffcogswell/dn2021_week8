@@ -1,0 +1,10 @@
+<h1>Event Practice 2</h1>
+
+<!-- This component calls doSomething in response to the event -->
+<app-childcomp (myevent)="doSomething($event)"></app-childcomp>
+
+<!-- This component calls doAnother in response to the event -->
+<app-childcomp (myevent)="doAnother($event)"></app-childcomp>
+
+<!-- This component ignores the event altogether -->
+<app-childcomp></app-childcomp>

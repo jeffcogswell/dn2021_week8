@@ -1,0 +1,14 @@
+<h1>Art App</h1>
+<button (click)="loadData()">Load</button>
+
+<ng-container *ngIf="artdata">
+  <ng-container *ngFor="let art of artdata.data">
+    <div>
+      <h2>{{ art.title }}</h2>
+
+      <img src="{{ artdata.config.iiif_url }}/{{ art.image_id }}/full/200,/0/default.jpg" /><br />
+      {{ art.artist_title }}<br />
+      {{ art.artwork_type_title }}
+    </div>
+  </ng-container>
+</ng-container>

@@ -35,4 +35,8 @@ export class SocialPostsComponent implements OnInit {
     }
   }
 
+  savePost(post: Post) {
+    this.posts.push(post);
+  }
+
 }
