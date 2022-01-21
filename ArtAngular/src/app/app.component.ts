@@ -13,7 +13,7 @@ export class AppComponent {
 	artdata:any = null;
 
 	// "Dependency Injection"
-	constructor(private http: HttpClient, private artapi:ArtapiService) { }
+	constructor(private artapi:ArtapiService) { }
 
 	loadData() {
 
@@ -23,13 +23,5 @@ export class AppComponent {
 			}
 		);
 
-		/*
-		var req = this.http.get<any>('https://api.artic.edu/api/v1/artworks?limit=10');
-		req.subscribe(
-			result => {
-				console.log(result);
-				this.artdata = result;
-			}
-		);*/
 	}
 }
