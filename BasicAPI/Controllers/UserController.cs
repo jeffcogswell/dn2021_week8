@@ -20,13 +20,13 @@ namespace BasicAPI.Controllers
 
 		//     POST /user
 		[HttpPost]
-		public bool Set(UserInfo user)
+		public UserInfo Set(UserInfo user)
 		{
 			UserInfo.User.username = user.username;
 			UserInfo.User.firstname = user.firstname;
 			UserInfo.User.lastname = user.lastname;
-			UserInfo.User.email = user.email;
-			return true;
+			UserInfo.User.email = user.email.ToLower();
+			return UserInfo.User;
 		}
 	}
 }

@@ -1,0 +1,6 @@
+<div>
+	<ng-container *ngFor="let band of allbands">
+		<app-show-band [band]="band"></app-show-band>
+	</ng-container>
+	<button (click)="refreshList()">Test</button>
+</div>

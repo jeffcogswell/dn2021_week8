@@ -17,6 +17,11 @@ export class AppComponent {
 		email: ''
 	};
 
+	newUsername: string = '';
+	newFirstname: string = '';
+	newLastname: string = '';
+	newEmail: string = '';
+
 	constructor(private http:HttpClient) {}
 
 	getUser() {
@@ -30,7 +35,44 @@ export class AppComponent {
 				// we're safe.
 				this.MyUser = result;
 			}
-		)
+		);
+	}
 
+	postUser() {
+		let tempObj: CurrentUser = {
+			username: this.newUsername,
+			firstname: this.newFirstname,
+			lastname: this.newLastname,
+			email: this.newEmail
+		};
+		this.http.post<CurrentUser>('https://localhost:44394/user', tempObj).subscribe(
+			(result: any) => {
+				this.MyUser = result;
+			}
+		);
 	}
 }
+
+
+/*
+
+
+	New Address:
+
+	Street: 529 Avon ST______
+	City:   Lansing__________
+	State:  MI
+	Zip:    48910-1701
+
+	[SAVE]
+
+		Click Save:
+			The browser-app does a POST to Amazon with the address
+			Amazon's server side software "cleanses" the address by adding the 4 digits
+				to the zip code
+			Amazon's server saves the data into the database
+			Amazon's server sends the updated data back to the browser app
+			Browser app receives it and rewrites the corrected address on the screen
+
+
+*/

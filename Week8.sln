@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ArtApp", "ArtApp\ArtApp.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasicAPI", "BasicAPI\BasicAPI.csproj", "{3992A18F-619A-48CE-AE96-5B14A72C6593}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DBAPI", "DBAPI\DBAPI.csproj", "{FEAC9A96-E832-49CE-8772-2327671F7378}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{3992A18F-619A-48CE-AE96-5B14A72C6593}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3992A18F-619A-48CE-AE96-5B14A72C6593}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3992A18F-619A-48CE-AE96-5B14A72C6593}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FEAC9A96-E832-49CE-8772-2327671F7378}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FEAC9A96-E832-49CE-8772-2327671F7378}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FEAC9A96-E832-49CE-8772-2327671F7378}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FEAC9A96-E832-49CE-8772-2327671F7378}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
