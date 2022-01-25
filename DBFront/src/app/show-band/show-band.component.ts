@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Band } from '../band';
 
 @Component({
@@ -8,11 +8,18 @@ import { Band } from '../band';
 })
 export class ShowBandComponent implements OnInit {
 
-	@Input() band: Band | null = null;
+	@Input() band: Band | undefined = undefined;
+
+	@Output() deleteme: EventEmitter<Band>
+		= new EventEmitter<Band>();
 
 	constructor() { }
 
 	ngOnInit(): void {
+	}
+
+	emitDeleteEvent() {
+		this.deleteme.emit(this.band);
 	}
 
 }

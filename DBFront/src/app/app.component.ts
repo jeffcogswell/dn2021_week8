@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Band } from './band';
 import { BandApiService } from './band-api.service';
 
 @Component({
