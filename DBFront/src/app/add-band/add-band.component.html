@@ -3,15 +3,7 @@
 	Name: <input type="text" [(ngModel)]="newband.name" /><br />
 	Best Album: <input type="text" [(ngModel)]="newband.bestalbum" /><br />
 	Number of Members: <input type="number" [(ngModel)]="newband.members" /><br />
-	Year Founded: 
-
-	<select [(ngModel)]="newband.founded">
-		<option value="1970">1970</option>
-		<option value="1971">1971</option>
-		<option value="1972">1972</option>
-		<option value="1973">1973</option>
-		<option value="1974">1974</option>
-	</select><br />
+	Year Founded: <input type="number" [(ngModel)]="newband.founded" /><br />
 
 	<button (click)="addBand()">Add</button>
 </div>
