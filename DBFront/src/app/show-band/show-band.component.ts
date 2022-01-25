@@ -10,8 +10,8 @@ export class ShowBandComponent implements OnInit {
 
 	@Input() band: Band | undefined = undefined;
 
-	@Output() deleteme: EventEmitter<Band>
-		= new EventEmitter<Band>();
+	@Output() deleteme: EventEmitter<number>
+		= new EventEmitter<number>();
 
 	constructor() { }
 
@@ -19,7 +19,7 @@ export class ShowBandComponent implements OnInit {
 	}
 
 	emitDeleteEvent() {
-		this.deleteme.emit(this.band);
+		this.deleteme.emit(this.band?.id);
 	}
 
 }
