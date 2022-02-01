@@ -1,0 +1,14 @@
+<div>
+	<div *ngFor="let part of parts" class="PartItem">
+		{{ part.name }}<br />
+		{{ part.description}}<br />
+		{{ part.inventory }}<br />
+		{{ part.onsale }}<br />
+		<button (click)="editItem()">Edit</button>
+	</div>
+</div>
+
+<div *ngIf="showEditForm">
+	<h2>Edit Item</h2>
+	<app-part-update [part]="editPart"></app-part-update>
+</div>

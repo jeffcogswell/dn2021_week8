@@ -1,0 +1,8 @@
+<div>
+	<h2>Edit Product</h2>
+	Name: <input type="text" [(ngModel)]="part.name" /><br /><br />
+	Description:<textarea [(ngModel)]="part.description" ></textarea><br /><br />
+	Inventory: <input type="number" [(ngModel)]="part.inventory" /><br /><br />
+	<input type="checkbox" [(ngModel)]="part.onsale" /> On Sale<br /><br />
+	<button (click)="updatePart()">Save Changes</button>
+</div>
