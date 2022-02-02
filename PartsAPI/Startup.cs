@@ -47,6 +47,8 @@ namespace PartsAPI
 
 			app.UseCors("LocalOriginsPolicy");
 
+			app.UseStaticFiles();
+
 			app.UseHttpsRedirection();
 
 			app.UseRouting();

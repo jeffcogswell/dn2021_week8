@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Part } from '../part';
 import { PartApiService } from '../part-api.service';
-import { Location } from '@angular/common';
 
 @Component({
 	selector: 'app-part-list',
@@ -21,7 +20,7 @@ export class PartListComponent implements OnInit {
 
 	parts: Part[] = [];
 
-	constructor(private partapi: PartApiService, private loc:Location) {
+	constructor(private partapi: PartApiService) {
 		console.log('Recreating ParListComponent!')
 		this.refreshList();
 		// If we wanted to update automatically we could do this:

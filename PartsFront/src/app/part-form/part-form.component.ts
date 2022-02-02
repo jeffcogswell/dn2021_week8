@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Part } from '../part';
 import { PartApiService } from '../part-api.service';
-import { Location } from '@angular/common';
+import { Router } from '@angular/router';
 
 @Component({
 	selector: 'app-part-form',
@@ -18,7 +18,7 @@ export class PartFormComponent implements OnInit {
 		onsale: false
 	};
 
-	constructor(private partapi:PartApiService, private loc:Location) { }
+	constructor(private partapi:PartApiService, private router:Router) { }
 
 	ngOnInit(): void {
 	}
@@ -26,7 +26,8 @@ export class PartFormComponent implements OnInit {
 	savePart() {
 		this.partapi.add(this.part, 
 			() => {
-				this.loc.go('/');
+				console.log('returning to home!!');
+				this.router.navigate(['/']);
 			}
 		);
 	}
